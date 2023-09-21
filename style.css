@@ -200,6 +200,7 @@ body{
     }
     .field-container input{
         font-size: 1rem;
+        margin-bottom:  1.7rem;
 
     }
     .field-container input::placeholder{
