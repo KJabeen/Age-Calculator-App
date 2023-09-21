@@ -1,0 +1,231 @@
+:root{
+    /* ### Primary */
+
+--Purple: hsl(259, 100%, 65%);
+--Lightred: hsl(0, 100%, 67%);
+
+    /* ### Neutral */
+
+--White: hsl(0, 0%, 100%);
+-Offwhite: hsl(0, 0%, 94%);
+--Lightgrey: hsl(0, 0%, 86%);
+-Smokeygrey: hsl(0, 1%, 44%);
+-Offblack: hsl(0, 0%, 8%);
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Poppins' ;
+    src: url('./assets/fonts/Poppins-Bold.ttf') format(ttf);
+    src: url('./assets/fonts/Poppins-BoldItalic.ttf') format(ttf);
+    src: url('./assets/fonts/Poppins-ExtraBold.ttf') format(ttf);
+    src: url('./assets/fonts/Poppins-ExtraBoldItalic.ttf') format(ttf);
+    src: url('./assets/fonts/Poppins-Italic.ttf') format(ttf);
+    src: url('./assets/fonts/Poppins-Regular.ttf') format(ttf);
+   
+
+
+}
+
+
+body{
+    
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* place-items: center; */
+    background-color: hsl(0, 0%, 86%);
+    
+}
+.container{
+   
+    width: 40%;
+    display: flex;
+    margin: auto;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 15px 15px  100px 15px;
+}
+.wrapper{
+    width: 100%;
+    font-family: 'Poppins' ;
+    padding: 2rem;
+}
+.field{
+    display: flex;
+    flex-direction: row;
+    gap: 1.7rem;
+}
+.field-group{
+    display: flex;
+    flex-direction: column;
+}
+.field-container{
+      
+    width: 100%;
+    padding: 1rem 1rem;
+    
+}
+.field-container label{
+    font-size: 0.8rem;
+    font-weight: bolder;
+    color: hsl(0, 1%, 44%);
+}
+.error-text{
+    display: none;
+}
+
+.error {
+    display: block;
+}
+.field-group.error input{
+    border: 1px solid hsl(0, 100%, 67%);
+}
+.labelerror{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.error-text{
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: hsl(0, 100%, 67%);
+    text-align: start;
+    padding: 0.2rem 0.05rem;
+    
+    
+}
+.field-container input{
+    width: 100%;
+    padding: 0.5rem 0.5rem ;
+    border-radius: 5px;
+    border: 1px solid hsl(0, 1%, 44%);
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 1.5rem;
+    font-family: 'Poppins';
+}
+.field-group input:focus{
+    border: 1px solid hsl(249, 10%, 26%,0.5);
+    outline: none;
+
+}
+.field-group input::placeholder{
+    color: hsl(0, 1%, 44%);
+    font-size: 0.8rem;
+    font-family: 'Roboto';
+    font-weight: 800;
+    font-size: 1.5rem;
+    font-family: 'Poppins';
+}
+.calculate{
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 0 0.3rem 0;
+}
+.calculate hr {
+   width: 100%;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 1rem;
+    border: none;
+    background-color: hsl(259, 100%, 65%);
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: black;
+    border: none;
+}
+.output{
+    font-weight: 800;
+    font-size: 1.7rem;
+    font-family: 'Poppins';
+    height: fit-content;
+}
+.output h1{
+    font-style: italic;
+}
+.output span{
+    color: hsl(259, 100%, 65%);
+}
+.attribution 
+{ 
+    font-size: 0.6rem; 
+    text-align: center; 
+    margin: auto;
+    position: relative;
+    bottom: -8px;
+    color: var(--VeryDarkGrayishBlue);
+    font-family:Poppins;
+    font-weight: 400;
+}
+.attribution a 
+{ 
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 425px){
+    
+    body{
+        width: 100vw;
+        height: 100vh;
+    }
+    .container{
+   
+        width: 90%;
+    }
+    .wrapper{
+        width: 100%;
+        padding: 1rem;
+    }
+    .field{
+        display: flex;
+        flex-direction: row;
+        gap: 0.7rem;
+        
+    }
+    .field-container input{
+        font-size: 1rem;
+
+    }
+    .field-container input::placeholder{
+        font-size: 1rem;
+    }
+    .error-text{
+        font-size: 0.5rem;
+    }
+    .field-container label{
+        font-size: 0.6rem;
+    }
+    .output{
+        font-size: 1.2rem;
+        margin-top: 2.5rem;
+    }
+    .calculate{
+        display: flex;
+        align-items: center;
+        padding: 1.5rem 0 0.3rem 0;
+    }
+    .calculate hr {
+       width: 100%;
+    }
+    .btn{
+        position: absolute;
+        right: 40%;
+        
+    }
+}
